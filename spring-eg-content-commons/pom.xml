@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.github.paulcwarren</groupId>
+		<groupId>it.intesys</groupId>
 		<artifactId>spring-eg-content</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -12,7 +12,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-content-commons</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>
@@ -51,7 +51,7 @@
 			<version>2.21.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-content-rest</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>

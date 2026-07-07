@@ -4,7 +4,7 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
 		<artifactId>spring-eg-content</artifactId>
-		<groupId>com.github.paulcwarren</groupId>
+		<groupId>it.intesys</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
@@ -38,13 +38,13 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-content-fs-boot-starter</artifactId>
 			<version>${spring-content-version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-versions-jpa-boot-starter</artifactId>
 			<version>${spring-content-version}</version>
 			<scope>test</scope>
@@ -101,7 +101,7 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-content-cmis</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>

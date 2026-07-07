@@ -5,7 +5,7 @@
 	<artifactId>spring-eg-content-s3</artifactId>
 
 	<parent>
-		<groupId>com.github.paulcwarren</groupId>
+		<groupId>it.intesys</groupId>
 		<artifactId>spring-eg-content</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -32,7 +32,7 @@
 
 		<!-- Spring Content -->
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-content-s3</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>
@@ -46,7 +46,7 @@
 
 		<!-- Locking and Versioning Spike -->
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-versions-jpa</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>
@@ -65,7 +65,7 @@
 	  		<scope>test</scope>
 	  	</dependency>
 	  	<dependency>
-	  		<groupId>com.github.paulcwarren</groupId>
+	  		<groupId>it.intesys</groupId>
 	  		<artifactId>spring-eg-content-commons</artifactId>
 	  		<version>0.0.1-SNAPSHOT</version>
 	  		<scope>test</scope>

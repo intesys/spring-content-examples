@@ -7,97 +7,97 @@ updates:
   open-pull-requests-limit: 10
   target-branch: main
   ignore:
-  - dependency-name: com.github.paulcwarren:spring-content-cmis
+  - dependency-name: it.intesys:spring-content-cmis
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-versions-jpa-boot-starter
+  - dependency-name: it.intesys:spring-versions-jpa-boot-starter
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-solr
+  - dependency-name: it.intesys:spring-content-solr
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-renditions-boot-starter
+  - dependency-name: it.intesys:spring-content-renditions-boot-starter
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-solr-boot-starter
+  - dependency-name: it.intesys:spring-content-solr-boot-starter
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-rest-boot-starter
+  - dependency-name: it.intesys:spring-content-rest-boot-starter
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-docx4j
+  - dependency-name: it.intesys:spring-content-docx4j
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:content-s3-spring-boot-starter
+  - dependency-name: it.intesys:content-s3-spring-boot-starter
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-gcs
+  - dependency-name: it.intesys:spring-content-gcs
     versions:
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-s3
-    versions:
-    - 1.2.1
-    - 1.2.2
-  - dependency-name: com.github.paulcwarren:content-jpa-spring-boot-starter
+  - dependency-name: it.intesys:spring-content-s3
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-jpa
+  - dependency-name: it.intesys:content-jpa-spring-boot-starter
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:content-mongo-spring-boot-starter
+  - dependency-name: it.intesys:spring-content-jpa
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-mongo
+  - dependency-name: it.intesys:content-mongo-spring-boot-starter
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:content-rest-spring-boot-starter
+  - dependency-name: it.intesys:spring-content-mongo
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-fs-boot-starter
+  - dependency-name: it.intesys:content-rest-spring-boot-starter
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:content-fs-spring-boot-starter
+  - dependency-name: it.intesys:spring-content-fs-boot-starter
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-fs
+  - dependency-name: it.intesys:content-fs-spring-boot-starter
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-elasticsearch
+  - dependency-name: it.intesys:spring-content-fs
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-jpa-boot-starter
+  - dependency-name: it.intesys:spring-content-elasticsearch
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-rest
+  - dependency-name: it.intesys:spring-content-jpa-boot-starter
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-commons
+  - dependency-name: it.intesys:spring-content-rest
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-versions-jpa
+  - dependency-name: it.intesys:spring-content-commons
     versions:
     - 1.2.1
     - 1.2.2
-  - dependency-name: com.github.paulcwarren:spring-content-azure-storage
+  - dependency-name: it.intesys:spring-versions-jpa
+    versions:
+    - 1.2.1
+    - 1.2.2
+  - dependency-name: it.intesys:spring-content-azure-storage
     versions:
     - 1.2.2

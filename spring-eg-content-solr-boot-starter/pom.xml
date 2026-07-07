@@ -5,7 +5,7 @@
 	<artifactId>spring-eg-content-solr-boot-starter</artifactId>
 
 	<parent>
-		<groupId>com.github.paulcwarren</groupId>
+		<groupId>it.intesys</groupId>
 		<artifactId>spring-eg-content</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -32,27 +32,27 @@
 
 		<!-- Spring Content JPA Repository -->
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-content-jpa-boot-starter</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>
 
 		<!-- Spring Content Solr Integration -->
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-content-solr-boot-starter</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-content-renditions-boot-starter</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>
 
 		<!-- Spring Content REST -->
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>content-rest-spring-boot-starter</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>
@@ -63,7 +63,7 @@
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>content-rest-spring-boot-starter</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>

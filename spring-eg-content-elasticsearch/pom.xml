@@ -5,7 +5,7 @@
 	<artifactId>spring-eg-content-elasticsearch</artifactId>
 
 	<parent>
-		<groupId>com.github.paulcwarren</groupId>
+		<groupId>it.intesys</groupId>
 		<artifactId>spring-eg-content</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -43,14 +43,14 @@
 
 		<!-- Spring Content JPA Repository -->
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-content-jpa-boot-starter</artifactId>
 			<version>${spring-content-version}</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-content-elasticsearch</artifactId>
 			<version>${spring-content-version}</version>
 			<scope>test</scope>
@@ -70,7 +70,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-eg-content-commons</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>test</scope>

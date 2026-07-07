@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.github.paulcwarren</groupId>
+		<groupId>it.intesys</groupId>
 		<artifactId>spring-eg-content</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -32,17 +32,17 @@
  			<artifactId>spring-hateoas</artifactId>
  		</dependency>
  		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-content-fs-boot-starter</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>
  		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>content-rest-spring-boot-starter</artifactId>
 			<version>${spring-content-version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.github.paulcwarren</groupId>
+			<groupId>it.intesys</groupId>
 			<artifactId>spring-eg-content-commons</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
