@@ -19,6 +19,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
+import jakarta.persistence.EntityManagerFactory;
 
 @Configuration
 @ComponentScan(excludeFilters={
@@ -48,6 +49,7 @@ public class JpaConfig {
 		factory.setJpaVendorAdapter(vendorAdapter);
 		factory.setPackagesToScan("examples.models");
 		factory.setDataSource(dataSource());
+		factory.setEntityManagerFactoryInterface(EntityManagerFactory.class);
 
 		return factory;
 	}

@@ -10,6 +10,19 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	
+	<dependencyManagement>
+		<dependencies>
+			<!-- Align the whole google-cloud stack (storage + nio LocalStorageHelper) to one release train -->
+			<dependency>
+				<groupId>com.google.cloud</groupId>
+				<artifactId>libraries-bom</artifactId>
+				<version>26.57.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
 	<dependencies>
 		<!-- Spring Data -->
 		<dependency>
@@ -80,7 +93,6 @@
         <dependency>
             <groupId>com.google.cloud</groupId>
             <artifactId>google-cloud-nio</artifactId>
-            <version>0.131.0</version>
             <scope>test</scope>
         </dependency>
 

@@ -1,4 +1,5 @@
 package examples;
+import jakarta.persistence.EntityManagerFactory;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.content.jpa.config.EnableJpaStores;
@@ -39,6 +40,7 @@ public class H2Config {
         vendorAdapter.setGenerateDdl(true);
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+        factory.setEntityManagerFactoryInterface(EntityManagerFactory.class);
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.setPackagesToScan("examples.models");
         factory.setDataSource(dataSource());

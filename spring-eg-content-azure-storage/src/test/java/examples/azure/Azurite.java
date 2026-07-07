@@ -33,6 +33,7 @@ public class Azurite extends GenericContainer<Azurite> implements Serializable {
 
     private Azurite() {
         super(DOCKER_IMAGE_NAME);
+        this.withExposedPorts(BLOB_SERVICE_PORT);
         this.start();
     }
 

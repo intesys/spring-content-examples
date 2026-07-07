@@ -1,4 +1,5 @@
 package support.cmis;
+import jakarta.persistence.EntityManagerFactory;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -63,6 +64,7 @@ public class Application {
 			vendorAdapter.setGenerateDdl(true);
 
 			LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+			factory.setEntityManagerFactoryInterface(EntityManagerFactory.class);
 			factory.setJpaVendorAdapter(vendorAdapter);
 			factory.setPackagesToScan("support.cmis");
 			factory.setDataSource(dataSource());

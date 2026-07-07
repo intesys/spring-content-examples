@@ -1,6 +1,7 @@
 package examples.versioning;
 
 import javax.sql.DataSource;
+import jakarta.persistence.EntityManagerFactory;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.content.azure.config.EnableAzureStorage;
@@ -56,6 +57,7 @@ public class AzureVersioningConfig {
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.setPackagesToScan("tests.versioning");
         factory.setDataSource(dataSource());
+        factory.setEntityManagerFactoryInterface(EntityManagerFactory.class);
 
         return factory;
     }

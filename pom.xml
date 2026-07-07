@@ -113,6 +113,18 @@ Integrates with Spring Data, Spring Data REST and Apache Solr</description>
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12.4</version>
+				<configuration>
+					<systemPropertyVariables>
+						<!-- Docker Desktop (Engine 25+, API >= 1.40) rejects docker-java's older default API version with HTTP 400.
+						     Force a modern API version so Testcontainers can start containers. -->
+						<api.version>1.44</api.version>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.sonatype.central</groupId>
 				<artifactId>central-publishing-maven-plugin</artifactId>
 				<version>0.11.0</version>

@@ -1,4 +1,5 @@
 package examples.versioning;
+import jakarta.persistence.EntityManagerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -82,6 +83,7 @@ public class FsVersioningConfig {
         vendorAdapter.setGenerateDdl(true);
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+        factory.setEntityManagerFactoryInterface(EntityManagerFactory.class);
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.setPackagesToScan("tests.versioning");
         factory.setDataSource(dataSource());

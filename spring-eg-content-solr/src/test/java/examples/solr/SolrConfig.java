@@ -1,4 +1,5 @@
 package examples.solr;
+import jakarta.persistence.EntityManagerFactory;
 
 import javax.sql.DataSource;
 
@@ -51,6 +52,7 @@ public class SolrConfig{
         vendorAdapter.setGenerateDdl(true);
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+        factory.setEntityManagerFactoryInterface(EntityManagerFactory.class);
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.setPackagesToScan(getClass().getPackage().getName());
         factory.setDataSource(dataSource());

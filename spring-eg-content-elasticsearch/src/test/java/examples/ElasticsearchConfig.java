@@ -1,4 +1,5 @@
 package examples;
+import jakarta.persistence.EntityManagerFactory;
 
 import javax.sql.DataSource;
 
@@ -46,6 +47,7 @@ public class ElasticsearchConfig {
         vendorAdapter.setGenerateDdl(true);
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+        factory.setEntityManagerFactoryInterface(EntityManagerFactory.class);
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.setPackagesToScan("model");
         factory.setDataSource(dataSource());

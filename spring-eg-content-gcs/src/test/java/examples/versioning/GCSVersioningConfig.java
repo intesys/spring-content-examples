@@ -1,4 +1,5 @@
 package examples.versioning;
+import jakarta.persistence.EntityManagerFactory;
 
 import javax.sql.DataSource;
 
@@ -53,6 +54,7 @@ public class GCSVersioningConfig {
         vendorAdapter.setGenerateDdl(true);
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+        factory.setEntityManagerFactoryInterface(EntityManagerFactory.class);
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.setPackagesToScan("tests.versioning");
         factory.setDataSource(dataSource());

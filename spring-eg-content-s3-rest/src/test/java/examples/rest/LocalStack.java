@@ -18,7 +18,7 @@ import software.amazon.awssdk.services.s3.S3Client;
 
 public class LocalStack extends LocalStackContainer implements Serializable {
 
-    private static final DockerImageName IMAGE_NAME = DockerImageName.parse("localstack/localstack");
+    private static final DockerImageName IMAGE_NAME = DockerImageName.parse("localstack/localstack:3.8.1");
 
     private LocalStack() {
         super(IMAGE_NAME);
@@ -32,8 +32,9 @@ public class LocalStack extends LocalStackContainer implements Serializable {
 
     public static S3Client getAmazonS3Client() throws URISyntaxException {
         return S3Client.builder()
-                .endpointOverride(new URI(Singleton.INSTANCE.getEndpointConfiguration(LocalStackContainer.Service.S3).getServiceEndpoint()))
-                .credentialsProvider(new LocalStack.CrossAwsCredentialsProvider(Singleton.INSTANCE.getDefaultCredentialsProvider()))
+                .region(software.amazon.awssdk.regions.Region.US_EAST_1)
+                .endpointOverride(Singleton.INSTANCE.getEndpointOverride(LocalStackContainer.Service.S3))
+                .credentialsProvider(software.amazon.awssdk.auth.credentials.StaticCredentialsProvider.create(software.amazon.awssdk.auth.credentials.AwsBasicCredentials.create(Singleton.INSTANCE.getAccessKey(), Singleton.INSTANCE.getSecretKey())))
                 .serviceConfiguration((serviceBldr) -> {serviceBldr.pathStyleAccessEnabled(true);})
                 .build();
     }

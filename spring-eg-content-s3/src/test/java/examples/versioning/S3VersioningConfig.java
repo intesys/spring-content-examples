@@ -1,4 +1,5 @@
 package examples.versioning;
+import jakarta.persistence.EntityManagerFactory;
 
 import examples.s3.S3Config;
 import org.springframework.beans.factory.annotation.Value;
@@ -52,6 +53,7 @@ public class S3VersioningConfig {
         vendorAdapter.setGenerateDdl(true);
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+        factory.setEntityManagerFactoryInterface(EntityManagerFactory.class);
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.setPackagesToScan("tests.versioning");
         factory.setDataSource(dataSource());
