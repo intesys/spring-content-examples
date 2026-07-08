@@ -115,7 +115,7 @@ Integrates with Spring Data, Spring Data REST and Apache Solr</description>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.12.4</version>
+				<version>3.5.6</version>
 				<configuration>
 					<systemPropertyVariables>
 						<!-- Docker Desktop (Engine 25+, API >= 1.40) rejects docker-java's older default API version with HTTP 400.
