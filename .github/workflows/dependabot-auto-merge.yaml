@@ -4,6 +4,7 @@ on: pull_request_target
 permissions:
   contents: write
   pull-requests: write
+  checks: read
 
 jobs:
   autoapprove:
@@ -24,8 +25,16 @@ jobs:
         uses: dependabot/fetch-metadata@v1.1.1
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
-      - name: Enable auto-merge for Dependabot PRs
-        if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-patch' || steps.metadata.outputs.update-type == 'version-update:semver-minor' }}
+      - name: Wait for the PR build to pass
+        if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-patch' }}
+        uses: lewagon/wait-on-check-action@v1.3.4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          check-name: build
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 20
+      - name: Enable auto-merge for Dependabot patch PRs
+        if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-patch' }}
         run: gh pr merge --auto --squash "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
