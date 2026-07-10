@@ -33,9 +33,13 @@ jobs:
           check-name: build
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 20
-      - name: Enable auto-merge for Dependabot patch PRs
+      - name: Merge Dependabot patch PRs
         if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-patch' }}
-        run: gh pr merge --auto --squash "$PR_URL"
+        # The build check is already awaited above, so merge directly. Not using --auto:
+        # `gh pr merge --auto` requires the repo to have "Allow auto-merge" enabled AND the
+        # target branch to carry protection rules with required checks, otherwise GitHub's
+        # enablePullRequestAutoMerge mutation fails with "Protected branch rules not configured".
+        run: gh pr merge --squash "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
