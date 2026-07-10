@@ -46,10 +46,7 @@ Integrates with Spring Data, Spring Data REST and Apache Solr</description>
 		<ginkgo-version>1.0.15</ginkgo-version>
 		<spring-content-version>4.0.0-SNAPSHOT</spring-content-version>
 		<springboot-version>4.0.5</springboot-version>
-		<spring-cloud.version>2023.0.4</spring-cloud.version>
 		<jakarta-persistence-api.version>3.2.0</jakarta-persistence-api.version>
-		<hibernate.version>5.6.15.Final</hibernate.version>
-		<hibernate-orm.version>6.1.6.Final</hibernate-orm.version>
 		<elasticsearch-rest-high-level-client.version>7.17.29</elasticsearch-rest-high-level-client.version>
 		<opencmis.version>1.1.0</opencmis.version>
 		<!-- Spring Boot 4.0 no longer manages rest-assured; pin it here.
@@ -64,13 +61,6 @@ Integrates with Spring Data, Spring Data REST and Apache Solr</description>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
 				<version>${springboot-version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
