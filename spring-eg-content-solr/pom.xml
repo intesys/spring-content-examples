@@ -43,7 +43,7 @@
 		<dependency>
 			<groupId>org.apache.solr</groupId>
 			<artifactId>solr-solrj</artifactId>
-			<version>9.10.1</version>
+			<version>10.0.0</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.codehaus.woodstox</groupId>
@@ -76,6 +76,15 @@
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>solr</artifactId>
+            <version>1.21.4</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- The Testcontainers Solr module only ships in the 1.x line; pin the core to the
+             matching 1.21.4 (overriding the 2.0.x managed by Spring Boot 4) so the shaded
+             classes SolrContainer relies on remain available. -->
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
             <version>1.21.4</version>
             <scope>test</scope>
         </dependency>

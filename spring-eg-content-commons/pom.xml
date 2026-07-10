@@ -65,6 +65,13 @@
 			<artifactId>ginkgo4j</artifactId>
 			<version>${ginkgo-version}</version>
 		</dependency>
+		<!-- Ginkgo4j specs are JUnit 4 (@RunWith); the JUnit Platform used by Spring Boot 4
+		     needs the vintage engine to discover and run them. Exposed transitively so the
+		     modules that re-use these shared specs pick it up. -->
+		<dependency>
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

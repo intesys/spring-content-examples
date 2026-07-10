@@ -1,23 +1,20 @@
 package examples.solrboot;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 /**
- * exclude={MongoRepositoriesAutoConfiguration.class} is only required because we re-use
- * tests from spring-eg-content-commons that puts spring-data-mongodb on the classpath and causes
- * autoconfiguration to @EnableMongoRepositories, rather than JPA
- * 
+ * With Spring Boot 4 the MongoDB repositories auto-configuration lives in the separate
+ * spring-boot-data-mongodb module, which is not on the classpath here, so no explicit
+ * exclusion is required even though commons puts spring-data-mongodb on the classpath.
+ *
  * @author paulcwarren
  *
  */
 
 @SpringBootApplication
 @EnableConfigurationProperties
-@EnableAutoConfiguration(exclude={MongoRepositoriesAutoConfiguration.class})
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

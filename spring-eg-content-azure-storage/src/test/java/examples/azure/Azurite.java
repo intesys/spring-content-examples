@@ -34,6 +34,10 @@ public class Azurite extends GenericContainer<Azurite> implements Serializable {
     private Azurite() {
         super(DOCKER_IMAGE_NAME);
         this.withExposedPorts(BLOB_SERVICE_PORT);
+        // The Azure Storage SDK shipped with Spring Boot 4 negotiates a newer REST API version
+        // than the Azurite image recognises, which makes it reject every request with HTTP 400.
+        // Start only the blob service, bound to all interfaces, and skip the version check.
+        this.withCommand("azurite-blob", "--blobHost", "0.0.0.0", "--skipApiVersionCheck");
         this.start();
     }
 

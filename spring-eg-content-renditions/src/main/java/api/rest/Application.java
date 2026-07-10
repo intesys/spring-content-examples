@@ -3,7 +3,6 @@ package api.rest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration;
 import org.springframework.content.fs.config.EnableFilesystemStores;
 import org.springframework.content.rest.config.RestConfiguration;
 import org.springframework.context.annotation.ComponentScan;

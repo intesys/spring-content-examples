@@ -5,7 +5,7 @@ import com.github.paulcwarren.ginkgo4j.Ginkgo4jSpringRunner;
 import org.junit.runner.RunWith;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.persistence.autoconfigure.EntityScan;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.content.commons.repository.Store;
 import org.springframework.content.rest.StoreRestResource;
