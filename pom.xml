@@ -108,9 +108,14 @@ Integrates with Spring Data, Spring Data REST and Apache Solr</description>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.15.0</version>
 				<configuration>
-					<!-- Spring Content 4.0.0-SNAPSHOT is published as Java 21 bytecode (class file v65),
-					     so the examples must compile at release 21 to link against it. -->
-					<release>21</release>
+					<!-- Compile the examples at release 25 (JDK 25 LTS). Spring Content 4.0.0-SNAPSHOT is
+					     published as Java 21 bytecode (class file v65), which the JDK 25 compiler links
+					     against without issue. -->
+					<release>25</release>
+					<!-- JDK 23+ no longer runs annotation processors discovered only on the classpath
+					     (e.g. Lombok, declared in provided scope). Re-enable full annotation processing so
+					     Lombok generates getters/setters as it did under JDK 21. -->
+					<proc>full</proc>
 				</configuration>
 			</plugin>
 			<plugin>
