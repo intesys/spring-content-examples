@@ -45,7 +45,7 @@ Integrates with Spring Data, Spring Data REST and Apache Solr</description>
 	<properties>
 		<ginkgo-version>1.0.15</ginkgo-version>
 		<spring-content-version>4.0.1</spring-content-version>
-		<springboot-version>4.0.5</springboot-version>
+		<springboot-version>4.1.0</springboot-version>
 		<jakarta-persistence-api.version>3.2.0</jakarta-persistence-api.version>
 		<elasticsearch-rest-high-level-client.version>7.17.29</elasticsearch-rest-high-level-client.version>
 		<opencmis.version>1.1.0</opencmis.version>
